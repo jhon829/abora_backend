@@ -35,4 +35,6 @@ app.add_middleware(
 )
 
 #정적 파일 서빙 설정
-app.mount("/tts", StaticFiles(directory="public/tts"), name="tts")
+# ✅ 정적 파일 경로를 /tts/static 으로 분리
+app.mount("/tts/static", StaticFiles(directory="public/tts"), name="tts_static")
+
