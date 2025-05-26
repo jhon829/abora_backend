@@ -27,7 +27,7 @@ app.include_router(ai_router)
 app.include_router(tts_router) #tts 추가
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 필요한 경우 특정 도메인으로 제한
+    allow_origins=["https://abora-front.vercel.app"],  # 필요한 경우 특정 도메인으로 제한
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
